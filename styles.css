@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+}
+
+body {
+    background: var(--white);
+    color: var(--very-dark-magenta);
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+}
+
+ul {
+    list-style: none;
+}
+
+.social-proof {
+    width: 85vw;
+    max-width: 75rem;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Info */
+.social-proof-info h2 {
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    line-height: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.social-proof-info p {
+    color: var(--dark-grayish-magenta);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* Ratings */
+.social-proof-ratings li {
+    background: var(--light-grayish-magenta);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.social-proof-ratings img {
+    margin: 0.2rem 0.1rem;
+}
+
+.social-proof-ratings p {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Testimonials */
+.social-proof-testimonials {
+    display: grid;
+    gap: 2rem;
+}
+
+.social-proof-testimonial {
+    background: var(--very-dark-magenta);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 2.5rem 2rem;
+    text-align: left;
+}
+
+.social-proof-testimonial .testimonial-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1.25rem;
+}
+
+.social-proof-testimonial .testimonial-info {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.social-proof-testimonial .testimonial-info h4 {
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
+}
+
+.social-proof-testimonial .testimonial-info p {
+    color: var(--soft-pink);
+    font-size: 1rem;
+}
+
+.social-proof-testimonial .testimonial-text {
+    color: var(--light-grayish-magenta);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .social-proof {
+        margin: 15vh auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+    .social-proof-info {
+        text-align: left;
+    }
+    .social-proof-testimonials {
+        grid-column: 1 / span 2;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .social-proof {
+        row-gap: 4rem;
+    }
+    .social-proof-info {
+        padding-right: 12.5%;
+    }
+    .social-proof-ratings {
+        align-self: center;
+        justify-self: end;
+    }
+    .social-proof-ratings li {
+        flex-direction: row;
+        padding-right: 3rem;
+    }
+    .social-proof-ratings div {
+        margin: 0 2rem 0 1rem;
+    }
+    .social-proof-ratings li:nth-child(1) {
+        margin-left: -6rem;
+        margin-right: 6rem;
+    }
+    .social-proof-ratings li:nth-child(2) {
+        margin-left: -3rem;
+        margin-right: 3rem;
+    }
+    .social-proof-testimonial:nth-child(2) {
+        margin: 1rem 0 -1rem;
+    }
+    .social-proof-testimonial:nth-child(3) {
+        margin: 2rem 0 -2rem;
+    }
+}
